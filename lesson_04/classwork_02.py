@@ -1,4 +1,4 @@
 n = int(input())
-for item in range(100):
-    if item % n == 0:
-        print(item)
+for k in range(101):
+    if k % n == 0:
+        print(k)
