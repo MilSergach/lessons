@@ -1,9 +1,8 @@
-my_list = [6, 15, 43, 36, 1, 34, 6]
-
+my_list = [10 , 24, 2, 5, 6, 265, 125, 25, 9]
 result = 0
 
-for item in my_list:
-    if item > 10:
-        result += item
-
+for k in my_list:
+    if k > 10:
+        print(k)
+        result += k
 print(result)
