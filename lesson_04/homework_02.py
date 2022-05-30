@@ -1,6 +1,8 @@
-n = input()
-my_list = [n]
-for i in reversed(my_list):
-    for k in my_list:
-        if i == k:
-            print('yes')
+my_list = input("Vvedite palindrom: ")
+my_list1 = list(my_list)
+my_list = list(my_list)
+my_list.reverse()
+if my_list == my_list1:
+    print('Yes')
+else:
+    print('No')
