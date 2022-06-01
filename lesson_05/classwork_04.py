@@ -1,12 +1,10 @@
-def month_to_season(month):
-    mapping = {
-        "winter":[1, 2, 12],
-        "spring":[3, 4, 5],
-        "summer":[6, 7, 8],
-        "autumn":[9, 10, 11],
-    }
-    for season, month_list in mapping.items():
-        if month in month_list:
-            return season
+i = int(input('Nomer mesiaca: '))
+def month_to_season(i):
+    season = {12:'Winter', 1:'Winter', 2:'Winter', 3:'Spring', 4:'Spring' ,5:'Spring',
+     6:'Summer', 7:'Summer', 8:'Summer', 9: 'autumn', 10: 'autumn', 11: 'autumn'}
+    i = season.get(i)
+    return i
 
-print(month_to_season(7))
+
+print(month_to_season(i))
+print(i)

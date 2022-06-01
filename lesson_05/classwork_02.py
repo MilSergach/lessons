@@ -1,12 +1,20 @@
+my_args = []
+
+while True:
+    r = input('Vvedite chislo: ')
+    try:
+        new = int(r)
+        my_args.append(new)
+    except ValueError:
+        break
+
 def sum_and_max(*args):
     result_sum = 0
-    max_item = args[0]
-    for item in args:
-        result_sum += item
-        if item > max_item:
-            max_item = item
-    return result_sum, max_item
+    max_value = 0
+    for i in args:
+        result_sum += i
+        if i > max_value:
+            max_value = i
+    return result_sum, max_value
 
-my_list = [1, 5, 16, 3, 66, -20, 5]
-print(sum_and_max(*my_list))
-print(sum_and_max(1, 5, 16, 3, 66, -20, 5))
+print(sum_and_max(*my_args))

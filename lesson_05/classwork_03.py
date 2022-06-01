@@ -1,24 +1,32 @@
-def my_max(*args):
-    max_item = args[0]
-    for item in args:
-        if item > max_item:
-            max_item = item
-    return max_item
+my_args = []
+func_type = input('min or max: ')
+while True:
+    k = input('Vvedite chisla: ')
+    try:
+        i = int(k)
+        my_args.append(i)
+    except ValueError:
+        break
 
-def my_min(*args):
-    min_item = args[0]
-    for item in args:
-        if item < min_item:
-            min_item = item
-    return min_item
+def func_max(*args):
+    max_value = args[0]
+    for y in my_args:
+        if y > max_value:
+            max_value = y
+    return max_value
+
+def func_min(*args):
+    min_value = args[0]
+    for t in my_args:
+        if t < min_value:
+            min_value = t
+    return min_value
 
 def min_or_max(func_type,*args):
-    if func_type == "min":
-        result = my_min(*args)
+    if func_type == 'min':
+        result = func_min(*args)
     else:
-        result = my_max(*args)
+        result = func_max(*args)
     return result
 
-my_list = [1, 5, 16, 3, 66, -20, 5]
-print(min_or_max("min", *my_list))
-print(min_or_max("max", *my_list))
+print(min_or_max(func_type, *my_args))

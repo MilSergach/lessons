@@ -1,8 +1,7 @@
-def format_string(name):
+def hello(name):
     print(f"Hello, {name}")
 
+my_list = ('Serg', 'Inna', 'Katrin', 'Alex', 'Misha')
 
-my_names = ["Alex", "Valera" , "Masha", "Igor", "Kostek"]
-
-for item in my_names:
-    format_string(item)
+for i in my_list:
+    hello(i)
